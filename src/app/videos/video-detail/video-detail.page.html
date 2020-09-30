@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/videos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles de video</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-no-padding">
+        <ion-img [src]="video.urlMiniImg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{video.email}}</h1>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <div class="div-image">
+      <ion-col size="1" *ngFor="let miniature of video.miniatures">
+        
+          <img [src]="miniature" />
+        
+      </ion-col>
+    </div>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
